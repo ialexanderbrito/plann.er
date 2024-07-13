@@ -67,3 +67,16 @@
       @apply bg-zinc-950 text-zinc-50 antialiased;
     }
   }
+
+  input {
+    color-scheme:dark;
+  }
+
+  .rdp {
+    margin: 0;
+  }
+
+  .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+    background-color: #a3e635;
+    color: #1a2e05;
+  }
