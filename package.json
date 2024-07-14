@@ -1,75 +1,28 @@
 {
-  "name": "boilerplate-vite",
+  "name": "backend",
   "version": "1.0.0",
-  "type": "module",
-  "engines": {
-    "node": ">=20.11.0",
-    "npm": ">=10.4.0"
-  },
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "serve": "vite preview",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix",
-    "format": "prettier --write **/*.{js,ts,tsx}",
-    "format:check": "prettier --check src/",
-    "commit": "cz",
-    "release": "semantic-release --no-ci",
-    "prepare": "husky"
+    "dev": "tsx watch --env-file .env src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "20.14.9",
+    "@types/nodemailer": "6.4.15",
+    "prisma": "5.16.1",
+    "tsx": "4.16.0",
+    "typescript": "5.5.2"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "^1.1.1",
-    "@radix-ui/react-slot": "^1.1.0",
-    "@radix-ui/react-toast": "^1.2.1",
-    "axios": "^1.7.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "date-fns": "^3.6.0",
-    "localforage": "^1.10.0",
-    "lucide-react": "^0.407.0",
-    "match-sorter": "^6.3.4",
-    "react": "^18.2.0",
-    "react-day-picker": "^8.10.1",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.24.1",
-    "sort-by": "^1.2.0",
-    "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "@commitlint/config-conventional": "^19.0.3",
-    "@ialexanderbrito/eslint-config": "^2.1.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20.14.10",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.19",
-    "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.57.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "postcss": "^8.4.39",
-    "semantic-release": "^23.0.2",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.5",
-    "vite-tsconfig-paths": "^4.3.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint-staged"
-    }
+    "@fastify/cors": "9.0.1",
+    "@prisma/client": "5.16.1",
+    "dayjs": "1.11.11",
+    "fastify": "4.28.1",
+    "fastify-type-provider-zod": "2.0.0",
+    "nodemailer": "6.9.14",
+    "zod": "3.23.8"
   }
 }
