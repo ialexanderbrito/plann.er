@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src",
+    "build": "tsup src && npx prisma generate",
     "start": "node dist/server.js",
-    "vercel-build": "npx prisma migrate deploy"
+    "vercel-build": "npx prisma migrate deploy",
+    "postinstall": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
