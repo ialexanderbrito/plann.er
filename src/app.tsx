@@ -1,4 +1,3 @@
-import { FormEvent, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { CreateTripPage } from '@/pages/create-trip';
@@ -11,6 +10,10 @@ const router = createBrowserRouter([
   },
   {
     path: 'trips/:tripId',
+    element: <TripDetailsPage />,
+  },
+  {
+    path: 'trips/:tripId/:participantId',
     element: <TripDetailsPage />,
   },
 ]);
