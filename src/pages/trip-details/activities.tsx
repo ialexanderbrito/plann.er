@@ -17,6 +17,13 @@ interface ActivitiesProps {
 }
 
 export function Activities({ activities, setActivities }: ActivitiesProps) {
+  function convertToLocalTime(dateString: string, offset: number) {
+    const date = new Date(dateString);
+    const localTime = new Date(date.getTime() + offset * 60 * 60 * 1000);
+
+    return localTime;
+  }
+
   return (
     <div className="space-y-8">
       {activities.map((category) => (
@@ -37,9 +44,13 @@ export function Activities({ activities, setActivities }: ActivitiesProps) {
                     <CircleCheck className="text-lime-300 size-5" />
                     <span className="text-zinc-100">{activity.title}</span>
                     <span className="text-zinc-400 text-sm ml-auto">
-                      {format(activity.occurs_at, 'HH:mm', {
-                        locale: ptBR,
-                      })}
+                      {format(
+                        convertToLocalTime(activity.occurs_at, +3),
+                        'HH:mm',
+                        {
+                          locale: ptBR,
+                        },
+                      )}
                       h
                     </span>
                   </div>
