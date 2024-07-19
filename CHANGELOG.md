@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ialexanderbrito/plann.er/compare/v1.1.0...v1.1.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* format timezone ([de779cc](https://github.com/ialexanderbrito/plann.er/commit/de779cc1e8a5ee17b2475330a42758ba3508007d))
+
 # [1.1.0](https://github.com/ialexanderbrito/plann.er/compare/v1.0.0...v1.1.0) (2024-07-18)
 
 
